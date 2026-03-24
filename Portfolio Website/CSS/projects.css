@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(to bottom, #1f3a2d, #9cd6aa, #d2b48c);
+    color: #1f3a2d;
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 50;
+}
+
+/* Logo container on left */
+.logo-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Logo icon circle */
+.logo-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* Float effect on hover */
+.logo-container:hover .logo-icon {
+    animation: floatLogo 1s ease-in-out infinite alternate;
+}
+
+@keyframes floatLogo {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+}
+
+/* Flower image centered in logo */
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* Dropdown menu buttons */
+.logo-menu {
+    position: absolute;
+    top: 80px; /* below the logo */
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+.logo-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.logo-menu-btn {
+    background-color: #9cd6aa;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.logo-menu-btn:hover {
+    background-color: #fff;
+    color: #9cd6aa;
+}
+
+/* Other nav links on right */
+.nav-links a {
+    color: #9cd6aa;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #d2b48c;
+    transform: scale(1.05);
+}
+
+
+/* HERO */
+.projects-hero {
+    margin-top: 120px;
+    text-align: center;
+    color: #fff;
+}
+
+.projects-hero h1 {
+    font-size: 2.5rem;
+}
+
+.projects-hero p {
+    color: #d2b48c;
+}
+
+/* GRID */
+.projects-container {
+    width: 85%;
+    margin: 60px auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* CARD */
+.project-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect */
+.project-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+}
+
+/* Glow overlay effect */
+.project-card::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(156,214,170,0.3) 0%, transparent 70%);
+    top: -50%;
+    left: -50%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+/* TEXT */
+.project-content h2 {
+    margin-top: 0;
+}
+
+.project-content p {
+    margin: 10px 0;
+}
+
+/* TAG */
+.tag {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 12px;
+    border-radius: 12px;
+    background: #9cd6aa;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+}

@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(to bottom, #1f3a2d, #9cd6aa, #d2b48c);
+    color: #1f3a2d;
+}
+
+.Experience_Container{
+    padding-bottom: 40px;
+}
+/* NAV (same fix applied) */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 50;
+}
+
+/* Logo container on left */
+.logo-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Logo icon circle */
+.logo-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* Float effect on hover */
+.logo-container:hover .logo-icon {
+    animation: floatLogo 1s ease-in-out infinite alternate;
+}
+
+@keyframes floatLogo {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+}
+
+/* Flower image centered in logo */
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* Dropdown menu buttons */
+.logo-menu {
+    position: absolute;
+    top: 80px; /* below the logo */
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+.logo-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.logo-menu-btn {
+    background-color: #9cd6aa;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.logo-menu-btn:hover {
+    background-color: #fff;
+    color: #9cd6aa;
+}
+
+/* Other nav links on right */
+.nav-links a {
+    color: #9cd6aa;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #d2b48c;
+    transform: scale(1.05);
+}
+
+/* HERO */
+.exp-hero {
+    margin-top: 120px;
+    text-align: center;
+    color: #fff;
+}
+
+.exp-hero h1 {
+    font-size: 2.5rem;
+}
+
+.exp-hero p {
+    color: #d2b48c;
+}
+
+/* TIMELINE */
+.timeline {
+    width: 80%;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+}
+
+/* vertical line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: #fff;
+    opacity: 0.3;
+}
+
+/* CARDS */
+.exp-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px 25px;
+    border-radius: 20px;
+    margin-left: 50px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.exp-card:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.timeline::before {
+    transition: all 0.3s ease;
+}
+
+.exp-card:hover ~ .timeline::before {
+    background: #9cd6aa;
+}
+
+/* timeline dot */
+.exp-card::before {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    background: #9cd6aa;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    transform: scale(0);
+    animation: bubblePop 0.5s ease-out forwards;
+}
+
+.exp-card:hover::before {
+    transform: scale(1.3);
+    background: #fff;
+    box-shadow: 0 0 15px #9cd6aa, 0 0 25px #9cd6aa;
+}
+
+@keyframes bubblePop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.3);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.exp-card:nth-child(1)::before {
+    animation-delay: 0.2s;
+}
+
+.exp-card:nth-child(2)::before {
+    animation-delay: 0.4s;
+}
+
+.exp-card:nth-child(3)::before {
+    animation-delay: 0.6s;
+}
+
+.exp-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: cardFade 0.6s ease forwards;
+}
+
+.exp-card:nth-child(1) { animation-delay: 0.2s; }
+.exp-card:nth-child(2) { animation-delay: 0.4s; }
+.exp-card:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes cardFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* TEXT */
+.exp-card h2 {
+    margin: 0;
+    color: #1f3a2d;
+}
+
+.exp-card h3 {
+    margin: 5px 0;
+    font-weight: normal;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: #d2b48c;
+    font-weight: bold;
+}
