@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(to bottom, #1f3a2d, #9cd6aa, #d2b48c);
+    color: white;
+}
+
+/* HERO */
+.commission-hero {
+    margin-top: 120px;
+    text-align: center;
+}
+
+.commission-hero h1 {
+    font-size: 2.5rem;
+}
+
+/* PRICING */
+.pricing-container {
+    width: 85%;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.price-card {
+    background: rgba(255,255,255,0.85);
+    color: #1f3a2d;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #9cd6aa;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1f3a2d;
+}
+
+/* RULES */
+.rules {
+    width: 80%;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.85);
+    padding: 25px;
+    border-radius: 20px;
+    color: #1f3a2d;
+    text-align: center;
+}
+
+/* CTA */
+.commission-cta {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #9cd6aa;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: white;
+    color: #9cd6aa;
+}
+
+.service-block {
+    margin-bottom: 40px;
+}
+
+.price-card {
+    background: rgba(255,255,255,0.85);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.price-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px #9cd6aa;
+}
+
+.request-form {
+    width: 80%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+#commissionForm input,
+#commissionForm textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+#commissionForm button {
+    background: #9cd6aa;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}

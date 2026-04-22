@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/res/greenstar.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commissions</title>
+
+    <link rel="stylesheet" href="/CSS/commissions.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="logo-container">
+        <div class="logo-icon">
+            <img src="/res/Adobe Express - file (2).png" alt="Logo">
+        </div>
+
+        <div class="logo-menu">
+                <button class="logo-menu-btn btn2" onclick="window.location.href='/HTML/commissions.html'">
+                    Commissions
+                </button>
+                <button class="logo-menu-btn btn2" onclick="window.location.href='/HTML/services.html'">
+                    Services
+                </button>
+            <!-- <button class="logo-menu-btn btn3">Testimonys</button> -->
+        </div>
+    </div>
+
+    <div class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="/HTML/about.html">About</a>
+        <a href="/HTML/projects.html">Projects</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="commission-hero">
+    <h1>Commissions</h1>
+    <p>Custom digital artwork made just for you ✨  (Long-Term Work)</p>
+</section>
+
+<!-- <section class="gallery">
+    <h2>My Work</h2>
+
+    <div class="gallery-grid">
+        <div class="gallery-item">Artwork 1</div>
+        <div class="gallery-item">Artwork 2</div>
+        <div class="gallery-item">Website 1</div>
+    </div>
+</section> -->
+
+<!-- PRICING -->
+<section class="pricing-container">
+
+    <!-- ART -->
+    <div class="service-block">
+        <h2>🎨 Art Commissions</h2>
+
+        <div class="price-card" onclick="selectService('Art - Sketch')">
+            <h3>Sketch</h3>
+            <p>$5 - $10</p>
+        </div>
+
+        <div class="price-card" onclick="selectService('Art - Full Color')">
+            <h3>Full Color</h3>
+            <p>$15 - $25</p>
+        </div>
+
+        <div class="price-card" onclick="selectService('Art - Custom Scene')">
+            <h3>Custom Scene</h3>
+            <p>$30+</p>
+        </div>
+    </div>
+
+    <!-- WEB DEV -->
+    <div class="service-block">
+        <h2>💻 Web Development</h2>
+
+        <div class="price-card" onclick="selectService('Web - Basic Site')">
+            <h3>Basic Website</h3>
+            <p>$25 - $50</p>
+        </div>
+
+        <div class="price-card" onclick="selectService('Web - Portfolio Site')">
+            <h3>Portfolio Site</h3>
+            <p>$50 - $100</p>
+        </div>
+
+        <div class="price-card" onclick="selectService('Web - Custom App')">
+            <h3>Custom App</h3>
+            <p>$100+</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- RULES -->
+<section class="rules">
+    <h2>Commission Info</h2>
+    <ul>
+        <li>Turnaround time: 3–10 days for art & website depends on the commission</li>
+        <li>50% of payment due before the commission and the other 50% once approval is given</li>
+        <li>Personal use only unless discussed</li>
+        <li>I have the right to decline complex or uncomfortable requests</li>
+        <li>Highly recommend having a basic idea or layout of drawing or website/app before requesting a commission</li>
+    </ul>
+</section>
+
+<!-- CTA -->
+<section class="request-form">
+    <h2>Request a Commission</h2>
+
+    <form id="commissionForm">
+
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+
+        <input type="text" id="service" placeholder="Selected Service" readonly>
+
+        <textarea id="details" placeholder="Describe your request..." required></textarea>
+
+        <button type="submit">Send Request</button>
+    </form>
+</section>
+
+<script src="/JS/index.js"></script>
+
+</body>
+</html>
