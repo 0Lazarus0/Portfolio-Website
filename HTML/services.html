@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/res/greenstar.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+
+    <link rel="stylesheet" href="/CSS/services.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+<body>
+
+    <!-- NAV (reuse exactly like others) -->
+    <nav>
+        <div class="logo-container">
+            <div class="logo-icon">
+                <img src="/res/Adobe Express - file (2).png">
+            </div>
+            <div class="logo-menu">
+                <button class="logo-menu-btn btn1">Commissions</button>
+                <button class="logo-menu-btn btn2">Services</button>
+                <button class="logo-menu-btn btn3">Testimonys</button>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="/HTML/about.html">About</a>
+            <a href="/HTML/projects.html">Projects</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="services-hero">
+        <h1>My Services</h1>
+        <p>Creative and technical work I offer</p>
+    </section>
+
+    <!-- SERVICES GRID -->
+    <section class="services-container">
+
+        <!-- Drawing -->
+        <div class="service-card">
+            <h2>🎨 Custom Artwork</h2>
+            <p>
+                Digital illustrations, character designs, and personalized commissions.
+                Perfect for gifts, profile art, or creative projects.
+            </p>
+            <span class="tag">Art</span>
+        </div>
+
+        <!-- Web Dev -->
+        <div class="service-card">
+            <h2>💻 Web Development</h2>
+            <p>
+                I build responsive, modern websites using HTML, CSS, and JavaScript.
+                Great for portfolios, small businesses, and personal brands.
+            </p>
+            <span class="tag">Development</span>
+        </div>
+
+        <!-- Coming Soon -->
+        <div class="service-card">
+            <h2>🚧 Coming Soon</h2>
+            <p>
+                More creative and technical services are on the way.
+                Stay tuned as I continue to expand my skills.
+            </p>
+            <span class="tag">Future</span>
+        </div>
+
+    </section>
+
+    <section class="contact-section">
+    <h2>Request a Service</h2>
+    <p>Fill out the form below and I’ll get back to you!</p>
+
+    <form id="serviceForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+
+        <select id="service">
+            <option value="Drawing Commission">Drawing Commission</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Other...">Other...</option>
+        </select>
+
+        <textarea id="details" placeholder="Describe what you need..." required></textarea>
+
+        <button type="submit">Send Request</button>
+    </form>
+</section>
+
+    <script src="/JS/index.js"></script>
+</body>
+</html>
