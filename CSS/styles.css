@@ -191,3 +191,77 @@ span{
     transform: scale(1.05);
     box-shadow: 0 0 25px #9cd6aa;
 }
+
+@media screen and (max-width: 440px) {
+        body{
+        overflow-x:hidden;
+    }
+
+    /* NAVBAR */
+    nav{
+        position: fixed;
+        top:0;
+        width:100%;
+        height:60px;
+
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+
+        padding:0 15px;
+        background: rgba(0,0,0,0.5);
+    }
+
+    /* Hide links on small screens (we'll add menu later) */
+    .nav-links{
+        display:none;
+    }
+
+    /* INTRO SECTION */
+    .Intro{
+        min-height:100vh;
+        padding:80px 20px 40px;
+
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        gap:20px;
+
+        background: linear-gradient(to bottom, #1f3a2d, #9cd6aa, #d2b48c);
+    }
+
+    /* PROFILE IMAGE */
+    .profile_container img{
+        width:140px;
+        height:140px;
+        border-radius:50%;
+        object-fit:cover;
+
+        box-shadow: 0 0 15px #9cd6aa;
+        border:4px solid #9cd6aa;
+    }
+
+    /* TEXT */
+    h1{
+        font-size: clamp(26px, 7vw, 40px);
+        color:#fff;
+    }
+
+    span{
+        color:#1f3a2d;
+    }
+
+    /* BUTTON */
+    .Mail_Button{
+        padding:12px 25px;
+        font-size:16px;
+
+        background:#9cd6aa;
+        color:#fff;
+
+        border-radius:12px;
+        text-decoration:none;
+    }
+}
